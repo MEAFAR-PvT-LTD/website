@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="projects container">
+  <h1>Projects</h1>
+  <ul class="project-list">
+    {% for project in collections.projects %}
+      <li>
+        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        <p class="muted">{{ project.data.description }}</p>
+      </li>
+    {% else %}
+      <li>No projects yet — coming soon.</li>
+    {% endfor %}
+  </ul>
+</section>

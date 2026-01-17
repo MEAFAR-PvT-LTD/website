@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Contact
+---
+
+<section class="contact container">
+  <h1>Contact Us</h1>
+  <p>Send us a message and we'll get back to you at `contact@meafar.com`.</p>
+
+  <!-- Replace `yourFormId` with your Formspree form ID -->
+  <form action="https://formspree.io/f/yourFormId" method="POST" class="contact-form">
+    <!-- Honeypot field to trap spam bots: leave blank -->
+    <label style="display:none;">
+      Leave this field blank
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
+    <label>
+      Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Subject
+      <input type="text" name="subject">
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <input type="hidden" name="_replyto" value="contact@meafar.com">
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>

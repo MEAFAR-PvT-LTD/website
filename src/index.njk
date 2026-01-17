@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>MeaFar — IT Solutions</h1>
+    <p>Professional IT solutions tailored for your business.</p>
+    <p><a class="btn" href="/projects/">View Projects</a> <a class="btn ghost" href="/contact/">Contact Us</a></p>
+  </div>
+</section>
+
+<section class="intro container">
+  <h2>About Us</h2>
+  <p>Founded by Arif Zaman, Afeefa Zaman, and Humaira Zaman, MeaFar provides practical IT solutions. Learn more <a href="/about/">about the team</a>.</p>
+</section>
+
+<section class="recent-projects container">
+  <h2>Recent Projects</h2>
+  <ul class="project-list">
+    {% for project in collections.projects | slice(0,3) %}
+      <li class="project-item">
+        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        <p class="muted">{{ project.data.description }}</p>
+      </li>
+    {% else %}
+      <li>No projects yet — coming soon.</li>
+    {% endfor %}
+  </ul>
+</section>
