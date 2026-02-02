@@ -4,19 +4,43 @@ layout: layouts/base.njk
 
 <section class="hero">
   <div class="container">
-    <h1>MeaFar — IT Solutions</h1>
-    <p>Professional IT solutions tailored for your business.</p>
-    <p><a class="btn" href="/projects/">View Projects</a> <a class="btn ghost" href="/contact/">Contact Us</a></p>
+    <h1>Transforming Education Through Intelligent Technology</h1>
+    <p>Customized EduTech solutions built by leading educators for schools and universities.</p>
+    <p><a class="btn" href="/projects/">Explore Our Work</a> <a class="btn ghost" href="/contact/">Let's Talk</a></p>
   </div>
 </section>
 
 <section class="intro container">
-  <h2>About Us</h2>
-  <p>Founded by Arif Zaman, Afeefa Zaman, and Humaira Zaman, MeaFar provides practical IT solutions. Learn more <a href="/about/">about the team</a>.</p>
+  <h2>Why MeaFar</h2>
+  <p>Founded by <strong>Dr. Arif Zaman</strong> — a PhD in Statistics from Stanford University and former Dean of LUMS — MeaFar brings together deep academic expertise and technical innovation. We understand educational institutions because we've led them. We build solutions rooted in data science and refined through real-world classroom experience.</p>
+  <p><a href="/about/">Learn more about our team and mission</a>.</p>
+</section>
+
+<section class="expertise container">
+  <h2>Our Expertise</h2>
+  <div class="expertise-grid">
+    <div class="expertise-item">
+      <h3>Data-Driven Assessment</h3>
+      <p>Leveraging statistical science and AI to improve academic evaluation and student outcomes.</p>
+    </div>
+    <div class="expertise-item">
+      <h3>Educational Leadership</h3>
+      <p>Built by educators with decades of experience in institutional management and academic excellence.</p>
+    </div>
+    <div class="expertise-item">
+      <h3>Customized Solutions</h3>
+      <p>No off-the-shelf approach. We design systems tailored to your institution's unique needs and context.</p>
+    </div>
+    <div class="expertise-item">
+      <h3>Rigorous Standards</h3>
+      <p>Research-backed methodology ensures our solutions are reliable, secure, and scalable.</p>
+    </div>
+  </div>
 </section>
 
 <section class="recent-projects container">
-  <h2>Recent Projects</h2>
+  <h2>Our Work</h2>
+  <p>We're currently developing intelligent solutions that make a real difference in education.</p>
   <ul class="project-list">
     {% for project in collections.projects | slice(0,3) %}
       <li class="project-item">
@@ -24,7 +48,7 @@ layout: layouts/base.njk
         <p class="muted">{{ project.data.description }}</p>
       </li>
     {% else %}
-      <li>No projects yet — coming soon.</li>
+      <li>Our first project — a Grade Suggestions System for BNU — is in development. <a href="/contact/">Contact us to learn more</a>.</li>
     {% endfor %}
   </ul>
 </section>

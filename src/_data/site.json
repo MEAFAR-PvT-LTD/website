@@ -1,10 +1,21 @@
 {
   "title": "MeaFar",
+  "tagline": "Transforming Education Through Intelligent Technology",
   "email": "contact@meafar.com",
   "founders": [
-    "Arif Zaman",
-    "Afeefa Zaman",
-    "Humaira Zaman"
+    {
+      "name": "Dr. Arif Zaman",
+      "role": "Founder & Chief Strategy Officer",
+      "bio": "PhD in Statistics from Stanford University. Former Dean of LUMS (Lahore University of Management Sciences). Renowned researcher in computational systems and pseudorandom number generation with 2000+ academic citations."
+    },
+    {
+      "name": "Afeefa Zaman",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Humaira Zaman",
+      "role": "Co-founder"
+    }
   ],
-  "description": "MeaFar provides IT solutions"
+  "description": "Customized EduTech solutions for schools and universities, founded by leading educators."
 }
