@@ -1,17 +1,5 @@
 module.exports = function (eleventyConfig) {
-  const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-  const isUserOrOrgPagesRepo = repositoryName
-    ?.toLowerCase()
-    .endsWith(".github.io");
-
-  // Detect GitHub Actions by checking for GITHUB_REPOSITORY (always set in GH Actions)
-  const isGitHubActions = !!process.env.GITHUB_REPOSITORY;
-
-  const pathPrefix =
-    process.env.ELEVENTY_PATH_PREFIX ||
-    (isGitHubActions && repositoryName && !isUserOrOrgPagesRepo
-      ? `/${repositoryName}/`
-      : "/");
+  const pathPrefix = "/";
 
   eleventyConfig.addPassthroughCopy("public");
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
