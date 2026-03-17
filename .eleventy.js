@@ -1,10 +1,15 @@
 module.exports = function (eleventyConfig) {
   const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-  const isUserOrOrgPagesRepo = repositoryName?.toLowerCase().endsWith(".github.io");
+  const isUserOrOrgPagesRepo = repositoryName
+    ?.toLowerCase()
+    .endsWith(".github.io");
+
+  // Detect GitHub Actions by checking for GITHUB_REPOSITORY (always set in GH Actions)
+  const isGitHubActions = !!process.env.GITHUB_REPOSITORY;
 
   const pathPrefix =
     process.env.ELEVENTY_PATH_PREFIX ||
-    (process.env.GITHUB_ACTIONS && repositoryName && !isUserOrOrgPagesRepo
+    (isGitHubActions && repositoryName && !isUserOrOrgPagesRepo
       ? `/${repositoryName}/`
       : "/");
 
