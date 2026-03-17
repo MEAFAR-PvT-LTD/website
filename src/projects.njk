@@ -7,7 +7,7 @@ layout: layouts/base.njk
   <ul class="project-list">
     {% for project in collections.projects %}
       <li>
-        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        <a href="{{ project.url | url }}">{{ project.data.title }}</a>
         <p class="muted">{{ project.data.description }}</p>
       </li>
     {% else %}

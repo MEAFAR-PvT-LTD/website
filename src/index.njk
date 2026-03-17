@@ -6,14 +6,14 @@ layout: layouts/base.njk
   <div class="container">
     <h1>Transforming Education Through Intelligent Technology</h1>
     <p>Customized EduTech solutions built by leading educators for schools and universities.</p>
-    <p><a class="btn" href="/projects/">Explore Our Work</a> <a class="btn ghost" href="/contact/">Let's Talk</a></p>
+    <p><a class="btn" href="{{ '/projects/' | url }}">Explore Our Work</a> <a class="btn ghost" href="{{ '/contact/' | url }}">Let's Talk</a></p>
   </div>
 </section>
 
 <section class="intro container">
   <h2>Why MeaFar</h2>
   <p>Founded by <strong>Dr. Arif Zaman</strong> — a PhD in Statistics from Stanford University and former Dean of LUMS — MeaFar brings together deep academic expertise and technical innovation. We understand educational institutions because we've led them. We build solutions rooted in data science and refined through real-world classroom experience.</p>
-  <p><a href="/about/">Learn more about our team and mission</a>.</p>
+  <p><a href="{{ '/about/' | url }}">Learn more about our team and mission</a>.</p>
 </section>
 
 <section class="expertise container">
@@ -44,11 +44,11 @@ layout: layouts/base.njk
   <ul class="project-list">
     {% for project in collections.projects | slice(0,3) %}
       <li class="project-item">
-        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        <a href="{{ project.url | url }}">{{ project.data.title }}</a>
         <p class="muted">{{ project.data.description }}</p>
       </li>
     {% else %}
-      <li>Our first project — a Grade Suggestions System for BNU — is in development. <a href="/contact/">Contact us to learn more</a>.</li>
+      <li>Our first project — a Grade Suggestions System for BNU — is in development. <a href="{{ '/contact/' | url }}">Contact us to learn more</a>.</li>
     {% endfor %}
   </ul>
 </section>

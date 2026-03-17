@@ -1,14 +1,14 @@
 <header class="site-header">
   <div class="container">
-    <a href="/" class="logo">
-      <img src="/public/assets/images/Meafar.png" alt="MeaFar logo" height="48">
+    <a href="{{ '/' | url }}" class="logo">
+      <img src="{{ '/public/assets/images/Meafar.png' | url }}" alt="MeaFar logo" height="48">
     </a>
 
     <nav class="site-nav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
-      <a href="/contact/">Contact</a>
+      <a href="{{ '/' | url }}">Home</a>
+      <a href="{{ '/about/' | url }}">About</a>
+      <a href="{{ '/projects/' | url }}">Projects</a>
+      <a href="{{ '/contact/' | url }}">Contact</a>
     </nav>
   </div>
 </header>
